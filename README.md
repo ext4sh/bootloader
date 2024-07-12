@@ -36,3 +36,15 @@ The bootloader includes several predefined error messages for various failure co
 - `Geom Err`: Geometry error
 - `Kern Load Err`: Kernel load error
 - `Disk read err`: Disk read error
+
+### Building
+
+```
+$ nasm -f bin -o bootloader.bin bootloader.asm
+```
+
+### Running
+
+```
+$ qemu-system-x86_64 -drive format=raw,file=bootloader.bin
+```
